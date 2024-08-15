@@ -28,7 +28,7 @@ export default function Layout() {
       id="main-wrapper"
     >
       <main
-        className="w-full mt-[20px] rounded-t-[40px]"
+        className="w-full mt-[10px] rounded-t-[40px]"
         style={{ backgroundImage: `url("${background}")` }}
       >
         <div style={{ height: "calc(100vh - 95px)" }}>
