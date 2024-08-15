@@ -21,32 +21,32 @@ export default function Loading() {
     return null;
   };
 
-  useEffect(() => {
-    loadImages(imagesToLoad)
-      .then(() => {
-        setImagesReady(true);
-      })
-      .catch((err) => {
-        console.log("Failed to load images", err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   loadImages(imagesToLoad)
+  //     .then(() => {
+  //       setImagesReady(true);
+  //     })
+  //     .catch((err) => {
+  //       console.log("Failed to load images", err);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    if (
-      imagesReady &&
-      tokenInfo.status == "succeeded" &&
-      usersInfo.status == "succeeded" &&
-      userInfo.status == "succeeded"
-    ) {
-      setIsReady(true);
-    } else if (
-      tokenInfo.status == "failed" ||
-      usersInfo.status == "failed" ||
-      userInfo.status == "failed"
-    ) {
-      setIsError(true);
-    }
-  }, [imagesReady, tokenInfo, usersInfo, userInfo]);
+  // useEffect(() => {
+  //   if (
+  //     imagesReady &&
+  //     tokenInfo.status == "succeeded" &&
+  //     usersInfo.status == "succeeded" &&
+  //     userInfo.status == "succeeded"
+  //   ) {
+  //     setIsReady(true);
+  //   } else if (
+  //     tokenInfo.status == "failed" ||
+  //     usersInfo.status == "failed" ||
+  //     userInfo.status == "failed"
+  //   ) {
+  //     setIsError(true);
+  //   }
+  // }, [imagesReady, tokenInfo, usersInfo, userInfo]);
 
   return (
     <>

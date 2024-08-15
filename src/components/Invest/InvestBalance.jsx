@@ -10,7 +10,7 @@ export default function InvestBalance() {
   return (
     <div
       ref={ref}
-      className="invest-balance px-[60px] flex items-center justify-center flex-col translate-y-[100px] opacity-0"
+      className="invest-balance px-[60px] flex items-center justify-center flex-col translate-y-[100px] opacity-0 relative z-10"
     >
       <h3 className="text-[20px] max-small:text-[18px]">Balance</h3>
       <h4 className="text-[46px] max-small:text-[34px]">1000.00$</h4>

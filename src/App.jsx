@@ -39,7 +39,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Loading />} />
         <Route path="/menu" element={<Layout />}>
-          <Route index element={<FallbackNavigate to="invest" />} />
+          <Route index element={<FallbackNavigate to="/menu/invest" />} />
           <Route path="invest">
             <Route index element={<Invest />} />
             <Route path="how-it-works" element={<HowItWorks />} />
