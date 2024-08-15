@@ -9,7 +9,6 @@ export default function Loading() {
   const [isReady, setIsReady] = useState();
   const [error, setIsError] = useState();
   const [imagesReady, setImagesReady] = useState();
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const userInfo = useSelector((state) => state.user);
 
   const FallbackNavigate = ({ to }) => {
@@ -21,20 +20,9 @@ export default function Loading() {
   };
 
   useEffect(() => {
-    const loadVideo = () => {
-      return new Promise((resolve, reject) => {
-        const video = document.createElement("video");
-        video.src = "./main-video.webm"; // Вкажіть шлях до вашого відео
-        video.oncanplaythrough = () => resolve();
-        video.onerror = (err) => reject(err);
-      });
-    };
-
-    // Завантаження зображень і відео
-    Promise.all([loadImages(imagesToLoad), loadVideo()])
+    loadImages(imagesToLoad)
       .then(() => {
         setImagesReady(true);
-        setVideoLoaded(true);
       })
       .catch(() => {
         setIsError(true);
@@ -55,12 +43,12 @@ export default function Loading() {
   // }, [imagesReady, tokenInfo, usersInfo, userInfo]);
 
   useEffect(() => {
-    if (imagesReady && videoLoaded) {
+    if (imagesReady) {
       setIsReady(true);
     } else if (userInfo.status == "failed") {
       setIsError(true);
     }
-  }, [imagesReady, videoLoaded, userInfo]);
+  }, [imagesReady, userInfo]);
 
   return (
     <>
