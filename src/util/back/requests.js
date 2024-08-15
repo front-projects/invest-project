@@ -78,8 +78,16 @@ export const PAYMENT_URL = "https://checkout.utilitywhalefederation.site/";
 export const getToken = async () => {
   return "test";
 };
+function delayedPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Проміс виконано через 2 секунди");
+    }, 1500);
+  });
+}
 
 export const getUserInfo = async () => {
+  await delayedPromise();
   return {
     id: 3,
     login: "u1",
@@ -169,103 +177,4 @@ export const getUserInfo = async () => {
       },
     ],
   };
-};
-
-function delayedPromise() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Проміс виконано через 2 секунди");
-    }, 1500);
-  });
-}
-
-export const getTopUsers = async () => {
-  await delayedPromise();
-  return [
-    {
-      id: 1,
-      name: "marko200",
-      username: "glendale",
-      investedAmount: 168.56,
-      earnedAmount: 2517.23,
-      createdAt: "2024-07-24T18:27:09.648736",
-    },
-    {
-      id: 2,
-      name: "s_i_m_is",
-      username: "harrogate",
-      investedAmount: 141.34,
-      earnedAmount: 2312.48,
-      createdAt: "2024-07-24T18:27:09.817368",
-    },
-    {
-      id: 3,
-      name: "Cortland",
-      username: "linton",
-      investedAmount: 123.9,
-      earnedAmount: 2125.87,
-      createdAt: "2024-07-24T18:27:09.951701",
-    },
-    {
-      id: 4,
-      name: "danny_samo",
-      username: "orchard",
-      investedAmount: 107.53,
-      earnedAmount: 1911.66,
-      createdAt: "2024-07-24T18:27:10.065779",
-    },
-    {
-      id: 5,
-      name: "joshua__",
-      username: "quintrell",
-      investedAmount: 93.12,
-      earnedAmount: 1719.22,
-      createdAt: "2024-07-24T18:27:10.183415",
-    },
-    {
-      id: 6,
-      name: "semoni",
-      username: "ridgemont",
-      investedAmount: 76.87,
-      earnedAmount: 1513.45,
-      createdAt: "2024-07-24T18:27:10.38343",
-    },
-    {
-      id: 7,
-      name: "laoc0020",
-      username: "sterling",
-      investedAmount: 61.43,
-      earnedAmount: 1331.19,
-      createdAt: "2024-07-24T18:27:10.502126",
-    },
-    {
-      id: 8,
-      name: "cryptopros",
-      username: "thurston",
-      investedAmount: 46.29,
-      earnedAmount: 1127.78,
-      createdAt: "2024-07-24T18:27:10.611769",
-    },
-    {
-      id: 9,
-      name: "Ivara",
-      username: "upton",
-      investedAmount: 34.67,
-      earnedAmount: 924.56,
-      createdAt: "2024-07-24T18:27:10.731075",
-    },
-    {
-      id: 10,
-      name: "Jorvik",
-      username: "vesper",
-      investedAmount: 23.12,
-      earnedAmount: 731.89,
-      createdAt: "2024-07-24T18:27:10.84265",
-    },
-  ];
-};
-
-export const buyLottery = async () => {
-  const test = await delayedPromise();
-  return test;
 };

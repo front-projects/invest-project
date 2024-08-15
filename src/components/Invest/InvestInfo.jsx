@@ -2,7 +2,7 @@ import ReactTypingEffect from "react-typing-effect";
 
 export default function InvestInfo() {
   return (
-    <div className="invest-info text-center text-[15px] invest-gradient px-[10%] max-small:text-[13px] max-small:h-[78px] h-[90px]">
+    <div className="invest-info text-center text-[15px] invest-gradient px-[10%] max-small:text-[13px] max-small:h-[78px] h-[90px] min-h-[90px]">
       <ReactTypingEffect
         eraseDelay={999999}
         speed={50}
