@@ -9,6 +9,7 @@ export default function Loading() {
   const [isReady, setIsReady] = useState();
   const [error, setIsError] = useState();
   const [imagesReady, setImagesReady] = useState();
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const tokenInfo = useSelector((state) => state.auth);
   const usersInfo = useSelector((state) => state.users);
   const userInfo = useSelector((state) => state.user);
@@ -21,15 +22,26 @@ export default function Loading() {
     return null;
   };
 
-  // useEffect(() => {
-  //   loadImages(imagesToLoad)
-  //     .then(() => {
-  //       setImagesReady(true);
-  //     })
-  //     .catch((err) => {
-  //       console.log("Failed to load images", err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    const loadVideo = () => {
+      return new Promise((resolve, reject) => {
+        const video = document.createElement("video");
+        video.src = "./main-video.webm"; // Вкажіть шлях до вашого відео
+        video.oncanplaythrough = () => resolve();
+        video.onerror = (err) => reject(err);
+      });
+    };
+
+    // Завантаження зображень і відео
+    Promise.all([loadImages(imagesToLoad), loadVideo()])
+      .then(() => {
+        setImagesReady(true);
+        setVideoLoaded(true);
+      })
+      .catch((err) => {
+        setIsError(true);
+      });
+  }, []);
 
   // useEffect(() => {
   //   if (
@@ -47,6 +59,14 @@ export default function Loading() {
   //     setIsError(true);
   //   }
   // }, [imagesReady, tokenInfo, usersInfo, userInfo]);
+
+  useEffect(() => {
+    if (imagesReady && videoLoaded) {
+      setIsReady(true);
+    } else {
+      setIsError(true);
+    }
+  }, [imagesReady, videoLoaded]);
 
   return (
     <>
@@ -68,8 +88,8 @@ export default function Loading() {
         </div>
       </main>
 
-      {/* {isReady && <FallbackNavigate to="/menu" />} */}
-      <FallbackNavigate to="/menu" />
+      {isReady && <FallbackNavigate to="/menu" />}
+      {/* <FallbackNavigate to="/menu" /> */}
     </>
   );
 }
