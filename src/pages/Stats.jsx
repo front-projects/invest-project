@@ -18,7 +18,7 @@ export default function Stats() {
   useEffect(() => {
     const timeline = gsap.timeline();
 
-    timeline.from(".stat-item", { translateY: 0, opacity: 1, stagger: 0.1 });
+    timeline.to(".stat-item", { translateY: 0, opacity: 1, stagger: 0.1 });
   }, []);
 
   return (
