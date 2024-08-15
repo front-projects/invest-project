@@ -24,7 +24,7 @@ export default function InvestVideo() {
         <source src="./main-video.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video> */}
-      <img src="./test.gif" alt="" />
+      <img src="./main-video.gif" alt="" />
     </div>
   );
 }
