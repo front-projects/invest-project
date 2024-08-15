@@ -21,7 +21,7 @@ export default function InvestVideo() {
         loop
         className="absolute h-[210px] w-screen inset-0 object-cover"
       >
-        <source src="./main-video.mp4" type="video/mp4" />
+        <source src="./main-video.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
     </div>
