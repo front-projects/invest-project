@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUp, StatBg } from "../UI/icons";
 
 export default function Stat({ stat }) {
   return (
-    <div className="flex w-[354px] relative min-h-[67px] max-sm:w-[100vw] stat-item">
+    <div className="flex w-[354px] relative min-h-[67px] max-sm:w-[100vw] stat-item opacity-0 translate-y-[100px]">
       <div className="absolute inset-0 w-full h-full">
         <StatBg />
       </div>
