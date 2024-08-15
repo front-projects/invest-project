@@ -10,8 +10,6 @@ export default function Loading() {
   const [error, setIsError] = useState();
   const [imagesReady, setImagesReady] = useState();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const tokenInfo = useSelector((state) => state.auth);
-  const usersInfo = useSelector((state) => state.users);
   const userInfo = useSelector((state) => state.user);
 
   const FallbackNavigate = ({ to }) => {
@@ -38,7 +36,7 @@ export default function Loading() {
         setImagesReady(true);
         setVideoLoaded(true);
       })
-      .catch((err) => {
+      .catch(() => {
         setIsError(true);
       });
   }, []);
@@ -46,14 +44,10 @@ export default function Loading() {
   // useEffect(() => {
   //   if (
   //     imagesReady &&
-  //     tokenInfo.status == "succeeded" &&
-  //     usersInfo.status == "succeeded" &&
   //     userInfo.status == "succeeded"
   //   ) {
   //     setIsReady(true);
   //   } else if (
-  //     tokenInfo.status == "failed" ||
-  //     usersInfo.status == "failed" ||
   //     userInfo.status == "failed"
   //   ) {
   //     setIsError(true);
@@ -63,10 +57,10 @@ export default function Loading() {
   useEffect(() => {
     if (imagesReady && videoLoaded) {
       setIsReady(true);
-    } else {
+    } else if (userInfo.status == "failed") {
       setIsError(true);
     }
-  }, [imagesReady, videoLoaded]);
+  }, [imagesReady, videoLoaded, userInfo]);
 
   return (
     <>

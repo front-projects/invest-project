@@ -1,1 +1,1 @@
-export const imagesToLoad = [];
+export const imagesToLoad = ["./main-bg.png", "./main-bg2.png"];

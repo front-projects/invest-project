@@ -1,9 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 
 // const URL = "https://utilitywhalefederation.site:6034/"; // TEST
-const URL = "https://utilitywhalefederation.site:6044/"; // PROD
+// const URL = "https://utilitywhalefederation.site:6044/"; // PROD
 // const URL = "http://localhost:6028/";
-export const PAYMENT_URL = "https://checkout.utilitywhalefederation.site/";
+// export const PAYMENT_URL = "https://checkout.utilitywhalefederation.site/";
 // export const PAYMENT_URL = "https://lottery-payment.vercel.app/";
 
 // export const getToken = async ({ login, password }) => {
@@ -95,78 +95,7 @@ export const getUserInfo = async () => {
     username: "u1",
     reflink: null,
     balanceAmount: 100,
-    investModels: [
-      {
-        id: 11,
-        naming: "Private",
-        priceAmount: 10,
-        trendingStatus: "MEDIUM",
-        partnerBonusAmount: 0,
-        mainBonusAmount: 0,
-        lostRefIncomeAmount: 0,
-        totalPrizeAmount: 0,
-        investModelStatus: "BOUGHT",
-        investModelLevel: "LEVEL_1",
-        unlockDate: null,
-        createdAt: "2024-07-24T17:58:46.874446",
-      },
-      {
-        id: 12,
-        naming: "Lvl 1",
-        priceAmount: 200,
-        trendingStatus: "MEDIUM",
-        partnerBonusAmount: 0,
-        mainBonusAmount: 0,
-        lostRefIncomeAmount: 0,
-        totalPrizeAmount: 0,
-        investModelStatus: "LOCKED",
-        investModelLevel: "LEVEL_2",
-        unlockDate: null,
-        createdAt: "2024-07-24T17:58:46.98856",
-      },
-      {
-        id: 13,
-        naming: "Lvl 2",
-        priceAmount: 170,
-        trendingStatus: "MEDIUM",
-        partnerBonusAmount: 0,
-        mainBonusAmount: 0,
-        lostRefIncomeAmount: 0,
-        totalPrizeAmount: 0,
-        investModelStatus: "LOCKED",
-        investModelLevel: "LEVEL_3",
-        unlockDate: null,
-        createdAt: "2024-07-24T17:58:47.106525",
-      },
-      {
-        id: 14,
-        naming: "Lvl 3",
-        priceAmount: 130,
-        trendingStatus: "MEDIUM",
-        partnerBonusAmount: 0,
-        mainBonusAmount: 110,
-        lostRefIncomeAmount: 0,
-        totalPrizeAmount: 11000,
-        investModelStatus: "LOCKED",
-        investModelLevel: "LEVEL_4",
-        unlockDate: null,
-        createdAt: "2024-07-24T17:58:47.21934",
-      },
-      {
-        id: 15,
-        naming: "Lvl 4",
-        priceAmount: 110,
-        trendingStatus: "MEDIUM",
-        partnerBonusAmount: 0,
-        mainBonusAmount: 0,
-        lostRefIncomeAmount: 0,
-        totalPrizeAmount: 0,
-        investModelStatus: "LOCKED",
-        investModelLevel: "LEVEL_5",
-        unlockDate: null,
-        createdAt: "2024-07-24T17:58:47.346111",
-      },
-    ],
+
     transactions: [
       {
         transactionAmount: 0.01,

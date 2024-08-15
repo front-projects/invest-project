@@ -15,7 +15,7 @@ export default function InvestVideo() {
       <div className="absolute bottom-[-1px] h-[90px] w-full bottom-bg z-10"></div>
       <div className="absolute top-[-1px] h-[73px] w-full top-bg z-10"></div>
 
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -23,7 +23,8 @@ export default function InvestVideo() {
       >
         <source src="./main-video.webm" type="video/webm" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
+      <img src="./test.gif" alt="" />
     </div>
   );
 }
