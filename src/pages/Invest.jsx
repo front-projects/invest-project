@@ -18,7 +18,7 @@ export default function Invest() {
         <InvestBalance />
         <div className="fixed w-[119px] h-[119px] bg-[#A4A4A4] blur-[64.7px] max-small:top-[310px] top-[410px] left-[-20px] rounded-[50%] z-10"></div>
         <div className="fixed w-[142px] h-[142px] bg-[#A4A4A4] blur-[64.7px] top-[240px] right-[-48px] rounded-[50%] z-10"></div>
-        <div className="fixed w-[178px] h-[178px] bg-[#A4A4A4] blur-[64.7px] bottom-[-50px] right-0 rounded-[50%] z-10"></div>
+        <div className="fixed w-[178px] h-[178px] bg-[#A4A4A4] blur-[64.7px] bottom-[-120px] right-0 rounded-[50%] z-10"></div>
       </div>
     </section>
   );
