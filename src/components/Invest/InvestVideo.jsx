@@ -9,7 +9,7 @@ export default function InvestVideo() {
 
   return (
     <div
-      className="w-screen min-h-[211px] relative opacity-0 bg-transparent"
+      className="w-screen min-h-[210px] relative opacity-0 bg-transparent max-xsmall:min-h-[190px]"
       ref={ref}
     >
       <div className="absolute bottom-[-1px] h-[90px] w-full bottom-bg z-10"></div>
@@ -27,7 +27,7 @@ export default function InvestVideo() {
       <img
         src="./main-video.gif"
         alt=""
-        className="w-screen h-[210px] min-h-[210px]"
+        className="w-screen h-[210px] min-h-[210px] max-xsmall:min-h-[190px] max-xsmall:h-[190px]"
       />
     </div>
   );
