@@ -1,3 +1,4 @@
+import WebApp from "@twa-dev/sdk";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -25,7 +26,10 @@ export default function Title() {
   }, []);
 
   return (
-    <Link to="/menu/invest/how-it-works">
+    <Link
+      to="/menu/invest/how-it-works"
+      onClick={() => WebApp.HapticFeedback.impactOccurred("soft")}
+    >
       <h1
         className="w-full text-center text-[30px] py-[15px] 
       border-b-[1px] border-[#FFFFFF33] tracking-[-0.04rem] 

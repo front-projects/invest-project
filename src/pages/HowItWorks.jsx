@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Star from "../components/UI/Star";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import WebApp from "@twa-dev/sdk";
 
 export default function HowItWorks() {
   const ref = useRef(null);
@@ -11,7 +12,10 @@ export default function HowItWorks() {
 
   return (
     <section className="h-full">
-      <Link to="/menu/invest">
+      <Link
+        to="/menu/invest"
+        onClick={() => WebApp.HapticFeedback.impactOccurred("soft")}
+      >
         <h1 className="w-full text-center text-[30px] py-[15px] border-b-[1px] border-[#FFFFFF33] max-small:text-[24px] max-small:py-[8px]">
           [ Back to Home ]
         </h1>
