@@ -12,8 +12,8 @@ export default function InvestVideo() {
       className="w-screen min-h-[210px] relative opacity-0 bg-transparent max-xsmall:min-h-[190px]"
       ref={ref}
     >
-      <div className="absolute bottom-[-1px] h-[90px] w-full bottom-bg z-10"></div>
-      <div className="absolute top-[-1px] h-[73px] w-full top-bg z-10"></div>
+      <div className="absolute bottom-[-1px] h-[90px] w-full bottom-bg z-10 "></div>
+      <div className="absolute top-[-1px] h-[73px] w-full top-bg z-10 "></div>
 
       {/* <video
         autoPlay
