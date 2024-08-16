@@ -393,6 +393,61 @@ export const StarIcon = () => {
     </svg>
   );
 };
+export const LoadingIcon = () => {
+  return (
+    <svg
+      width="165"
+      height="164"
+      viewBox="0 0 65 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d_91_2309)">
+        <path
+          d="M52 31.9865C44.3502 32.6636 39.9551 33.2865 37.2568 35.345C34.0856 37.7555 33.3345 42.1704 32.5 51C31.6377 41.8453 30.8588 37.4576 27.3816 35.1012C24.6833 33.2594 20.316 32.6636 13 32.0135C20.622 31.3364 25.0449 30.7135 27.7154 28.6821C30.9144 26.2445 31.6655 21.8567 32.5 13C33.2789 21.1525 33.9743 25.5132 36.5613 28.0321C39.1484 30.551 43.6548 31.2552 52 31.9865Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_91_2309"
+          x="0"
+          y="0"
+          width="65"
+          height="64"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="6.5" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.93 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_91_2309"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_91_2309"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
 
 export const StatBg = () => {
   return (
