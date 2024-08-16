@@ -117,3 +117,7 @@ main {
   background: linear-gradient(180deg, rgba(22, 22, 22, 0) 0%, #161616 100%);
   transform: matrix(1, 0, 0, -1, 0, 0);
 }
+
+.stat-item {
+  will-change: transform, opacity;
+}

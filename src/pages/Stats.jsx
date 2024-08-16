@@ -16,9 +16,14 @@ export default function Stats() {
   ];
 
   useEffect(() => {
-    const timeline = gsap.timeline();
+    const anim = gsap.to(".stat-item", {
+      translateY: 0,
+      opacity: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+    });
 
-    timeline.to(".stat-item", { translateY: 0, opacity: 1, stagger: 0.1 });
+    return () => anim.kill();
   }, []);
 
   return (
