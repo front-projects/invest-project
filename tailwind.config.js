@@ -9,6 +9,7 @@ export default {
       xl: "460px",
       "max-small": { raw: "(max-height: 706px)" },
       "max-xsmall": { raw: "(max-height: 640px)" },
+      xsmall: { raw: "(min-height: 640px)" },
     },
     extend: {},
   },
