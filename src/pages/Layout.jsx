@@ -1,8 +1,8 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 import Navigation from "../components/Navigation/Navigation";
-// import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function Layout() {
   const location = useLocation();
@@ -17,10 +17,10 @@ export default function Layout() {
     }
   }, [pathname]);
 
-  // const user = useSelector((state) => state.user);
-  // if (user.status !== "succeeded") {
-  //   return <Navigate to="loading" />;
-  // }
+  const user = useSelector((state) => state.user);
+  if (user.status !== "succeeded") {
+    return <Navigate to="loading" />;
+  }
   return (
     <div
       className="w-screen h-screen flex flex-col items-center justify-between xl:hidden"

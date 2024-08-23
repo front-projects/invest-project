@@ -43,7 +43,7 @@ export default function Loading() {
   // }, [imagesReady, tokenInfo, usersInfo, userInfo]);
 
   useEffect(() => {
-    if (imagesReady) {
+    if (imagesReady && userInfo.status == "succeeded") {
       setIsReady(true);
     } else if (userInfo.status == "failed") {
       setIsError(true);
