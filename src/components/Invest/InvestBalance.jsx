@@ -42,7 +42,7 @@ export default function InvestBalance() {
         </div>
         <div className="text-center">
           <h3 className="text-[20px] max-small:text-[16px]">Balance</h3>
-          <h4 className="text-[26px]">122000.00$</h4>
+          <h4 className="text-[26px]">{balance ? balance.toFixed(2) : 0.0}$</h4>
         </div>
         <div className="text-[18px]" onClick={moneyWithdraw}>
           [ Withdr ]
