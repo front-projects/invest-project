@@ -12,7 +12,7 @@ export default function NavigationBg() {
 
   return (
     <>
-      <div className="absolute h-[47px] w-full">
+      <div className="absolute h-[47px] inset-0 w-full">
         {pathname.includes("invest") ? (
           <InvestBg2 />
         ) : pathname.includes("partners") ? (

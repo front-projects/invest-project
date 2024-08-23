@@ -2,18 +2,10 @@ import { useEffect } from "react";
 import Stat from "../components/Stats/Stat";
 import Title from "../components/UI/Title";
 import gsap from "gsap";
+import { useSelector } from "react-redux";
 
 export default function Stats() {
-  const stats = [
-    { amount: 900, type: "INCOME" },
-    { amount: 900, type: "INCOME" },
-    { amount: 700, type: "INCOME" },
-    { amount: 900, type: "INCOME" },
-    { amount: 900, type: "WITHDRAW" },
-    { amount: 700, type: "INCOME" },
-    { amount: 900, type: "INCOME" },
-    { amount: 900, type: "WITHDRAW" },
-  ];
+  const stats = useSelector((state) => state.user.info.transactions);
 
   useEffect(() => {
     const anim = gsap.to(".stat-item", {
@@ -39,7 +31,10 @@ export default function Stats() {
           <div>History is empty</div>
         ) : (
           stats.map((stat) => (
-            <Stat key={stat.amount * Math.random() * 100} stat={stat} />
+            <Stat
+              key={stat.transactionAmount * Math.random() * 100}
+              stat={stat}
+            />
           ))
         )}
       </div>

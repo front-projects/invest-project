@@ -7,10 +7,15 @@ export default function Stat({ stat }) {
         <StatBg />
       </div>
       <div className="absolute w-full h-full flex items-center justify-between px-[20px] text-[20px]">
-        <img src="/stat.png" alt="" />
-        <div>Nick Name</div>
-        {stat.type !== "WITHDRAW" ? <ArrowUp /> : <ArrowDown />}
-        <div>{stat.amount.toFixed(2)}$</div>
+        {/* <img src="/stat.png" alt="" /> */}
+        <div className="text-[12px]">{stat.description}</div>
+
+        <div
+          className={`flex gap-2 items-center ${stat.transactionType == "INCOME" ? "text-green-300" : "text-red-300"}`}
+        >
+          {stat.transactionType == "INCOME" ? <ArrowUp /> : <ArrowDown />}
+          {stat.transactionAmount.toFixed(2)}$
+        </div>
       </div>
     </div>
   );

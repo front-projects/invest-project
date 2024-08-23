@@ -1,22 +1,16 @@
 import { useEffect, useRef } from "react";
 import Partner from "./Partner";
 import gsap from "gsap";
+import { useSelector } from "react-redux";
 
 export default function PartnersList() {
+  const partners = useSelector((state) => state.user.info.bottomRefferals);
+
   const ref = useRef(null);
   useEffect(() => {
     gsap.to(ref.current, { translateY: 0, opacity: 1 });
   }, []);
 
-  const partners = [
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-    { name: "Nick Name", amount: 900 },
-  ];
   return (
     <div
       ref={ref}
@@ -30,7 +24,7 @@ export default function PartnersList() {
       ) : (
         partners.map((partner) => (
           <Partner
-            key={partner.name + Math.random() * 1000}
+            key={partner.amount + Math.random() * 1000}
             partner={partner}
           />
         ))

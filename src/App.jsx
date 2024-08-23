@@ -3,7 +3,6 @@ import {
   Route,
   Routes,
   useNavigate,
-  useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
 import WebApp from "@twa-dev/sdk";

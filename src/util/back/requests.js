@@ -3,7 +3,7 @@ import axios from "axios";
 const URL = "https://blockcreater.com:6054/"; // TEST
 // const URL = "https://utilitywhalefederation.site:6044/"; // PROD
 // const URL = "http://localhost:6028/";
-// export const PAYMENT_URL = "https://checkout.utilitywhalefederation.site/";
+export const PAYMENT_URL = "https://checkout.blockcreater.com/";
 // export const PAYMENT_URL = "https://lottery-payment.vercel.app/";
 
 export const getToken = async ({ login, password }) => {
@@ -32,46 +32,12 @@ export const getUserInfo = async (token) => {
         Authorization: `Bearer ${token}`,
       },
     });
+    console.log(response.data);
     return response.data;
   } catch (error) {
     throw new Error(error);
   }
 };
-
-// export const getTopUsers = async (token) => {
-//   try {
-//     const response = await axios.get(URL + "api/users/top ", {
-//       headers: {
-//         Authorization: `Bearer ${token}`,
-//       },
-//     });
-
-//     return response.data;
-//   } catch (error) {
-//     throw new Error(error);
-//   }
-// };
-
-// export const buyLottery = async (token, lottery) => {
-//   try {
-//     const response = await axios.patch(
-//       URL + "api/tables",
-//       {
-//         investModelLevel: lottery,
-//       },
-//       {
-//         headers: {
-//           Authorization: `Bearer ${token}`,
-//         },
-//       },
-//     );
-//     if (response.status == 200) {
-//       return true;
-//     }
-//   } catch (error) {
-//     return false;
-//   }
-// };
 
 //
 // export const getToken = async () => {
@@ -81,7 +47,7 @@ export const getUserInfo = async (token) => {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {
 //       resolve("Проміс виконано через 2 секунди");
-//     }, 1500);
+//     }, 2500);
 //   });
 // }
 
