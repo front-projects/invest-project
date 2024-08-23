@@ -1,7 +1,9 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 
 export default function InvestVideo() {
+  const balance = useSelector((state) => state.user.info.balanceAmount);
   const ref = useRef(null);
   useEffect(() => {
     gsap.to(ref.current, { opacity: 1, duration: 2 });
@@ -25,7 +27,7 @@ export default function InvestVideo() {
         Your browser does not support the video tag.
       </video> */}
       <img
-        src="./main-video.gif"
+        src={balance > 0 ? "./main-video.gif" : "./static.png"}
         alt=""
         className="w-screen h-[210px] min-h-[210px] max-xsmall:min-h-[190px] max-xsmall:h-[190px]"
       />

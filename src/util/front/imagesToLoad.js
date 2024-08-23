@@ -3,4 +3,5 @@ export const imagesToLoad = [
   "./main-bg2.png",
   "./main-video.gif",
   "./stat.png",
+  "./static.png",
 ];
