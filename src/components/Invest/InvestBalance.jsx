@@ -37,14 +37,16 @@ export default function InvestBalance() {
         ref={refSmall}
         className="px-[4px] flex items-center gap-2 justify-center translate-y-[100px] opacity-0 relative z-10 w-full xsmall:hidden"
       >
-        <div className="text-[18px]" onClick={() => alert("hi")}>
+        <div className="text-[18px]" onClick={moneyDeposit}>
           [ Deposit ]
         </div>
         <div className="text-center">
           <h3 className="text-[20px] max-small:text-[16px]">Balance</h3>
           <h4 className="text-[26px]">122000.00$</h4>
         </div>
-        <div className="text-[18px]">[ Withdr ]</div>
+        <div className="text-[18px]" onClick={moneyWithdraw}>
+          [ Withdr ]
+        </div>
         {/* <div className="flex w-full justify-between text-[22px] items-center max-small:text-[20px] font-['Turret-Road-Medium']"></div> */}
       </div>
       <div
