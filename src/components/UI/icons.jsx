@@ -1,8 +1,8 @@
 export const InvestIcon = () => {
   return (
     <svg
-      width="24"
-      height="25"
+      width="20"
+      height="21"
       viewBox="0 0 24 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +20,8 @@ export const InvestIcon = () => {
 export const PartnersIcon = () => {
   return (
     <svg
-      width="33"
-      height="25"
+      width="28"
+      height="20"
       viewBox="0 0 33 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +43,8 @@ export const PartnersIcon = () => {
 export const StatsIcon = () => {
   return (
     <svg
-      width="20"
-      height="24"
+      width="16"
+      height="20"
       viewBox="0 0 20 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
