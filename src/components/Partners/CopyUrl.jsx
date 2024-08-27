@@ -23,7 +23,7 @@ export default function CopyUrl() {
   return (
     <CopyToClipboard text={url ? url : "reflink"}>
       <div
-        className="w-full text-center text-[15px] flex items-center justify-center gap-4 overflow-hidden py-2 border-b-[1px] border-[#FFFFFF33]"
+        className="w-full text-center text-[15px] flex items-center justify-center gap-4 overflow-hidden py-2 border-b-[1px] border-[#FFFFFF33] px-4"
         onClick={() => {
           WebApp.HapticFeedback.impactOccurred("medium");
           setCopied(true);
@@ -42,6 +42,7 @@ export default function CopyUrl() {
         </p>
 
         <p className="text-[30px]"> ]</p>
+        <p className="text-[13px] ml-[-10px] max-w-[46px]">click to copy</p>
       </div>
     </CopyToClipboard>
   );

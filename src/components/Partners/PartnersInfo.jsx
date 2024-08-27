@@ -13,7 +13,7 @@ export default function PartnersInfo() {
       ref={ref}
       className="w-full text-center text-[20px] px-[40px] tracking-[-0.04rem] mb-[10px] translate-y-[-50px] opacity-0"
     >
-      Get 20% of your referrals&apos; contribution
+      Receive up to 6% of profits from invited members
     </h3>
   );
 }
