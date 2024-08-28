@@ -27,7 +27,7 @@ export default function InvestVideo() {
         Your browser does not support the video tag.
       </video> */}
       <img
-        src={balance > 0 ? "./main-video.gif" : "./static.png"}
+        src={balance >= 1 ? "./main-video.gif" : "./static.png"}
         alt=""
         className="w-screen h-[210px] min-h-[210px] max-xsmall:min-h-[190px] max-xsmall:h-[190px]"
       />
