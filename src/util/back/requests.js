@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const URL = "https://blockcreater.com:6054/"; // TEST
-// const URL = "https://utilitywhalefederation.site:6044/"; // PROD
-// const URL = "http://localhost:6028/";
+// const URL = "https://blockcreater.com:6054/"; // TEST
+const URL = "https://blockcreater.com:6064/"; //PROD
 export const PAYMENT_URL = "https://checkout.blockcreater.com/";
-// export const PAYMENT_URL = "https://lottery-payment.vercel.app/";
+// export const PAYMENT_URL = "https://lottery-payment.vercel.app/"; //TEST
 
 export const getToken = async ({ login, password }) => {
   const authHeader = "Basic " + btoa(`${login}:${password}`);
