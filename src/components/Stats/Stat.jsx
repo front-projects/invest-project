@@ -11,9 +11,9 @@ export default function Stat({ stat }) {
         <div className="text-[12px]">{stat.description}</div>
 
         <div
-          className={`flex gap-2 items-center ${stat.transactionType == "INCOME" ? "text-green-300" : "text-red-300"}`}
+          className={`flex gap-2 items-center ${(stat.transactionType == "INCOME" || stat.transactionType == "DEPOSIT")  ? "text-green-300" : "text-red-300"}`}
         >
-          {stat.transactionType == "INCOME" ? <ArrowUp /> : <ArrowDown />}
+          {(stat.transactionType == "INCOME" || stat.transactionType == "DEPOSIT")  ? <ArrowUp /> : <ArrowDown />}
           {stat.transactionAmount.toFixed(2)}$
         </div>
       </div>
