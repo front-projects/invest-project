@@ -71,8 +71,8 @@ export default function Loading() {
         </div>
       </main>
 
-      {isReady && <FallbackNavigate to="/menu" />}
-      {/* <FallbackNavigate to="/menu" /> */}
+      {/* {isReady && <FallbackNavigate to="/menu" />} */}
+      <FallbackNavigate to="/menu" />
     </>
   );
 }

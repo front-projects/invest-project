@@ -3,38 +3,30 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "Turret-Road-Bold";
+  font-family: "UEFAEuro-Bold";
   src:
     local("Turret Road"),
-    url("/fonts/turret-road.bold.ttf") format("truetype");
+    url("/fonts/UEFAEuro-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Turret-Road-Medium";
+  font-family: "UEFAEuro-Heavy";
   src:
     local("Turret Road"),
-    url("/fonts/turret-road.medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Turret-Road-ExtraBold";
-  src:
-    local("Turret Road"),
-    url("/fonts/turret-road.extrabold.ttf") format("truetype");
-  font-weight: 800;
+    url("/fonts/UEFAEuro-HeavyNarrow.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
 }
 
 :root {
-  font-family: "Turret-Road-Bold";
+  font-family: "UEFAEuro-Bold";
   line-height: 1.5;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgba(5, 5, 5, 0.05);
+  background-color: #1a5b00;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,73 +43,47 @@
 body {
   overflow: hidden;
 }
-
-h2 {
-  font-family: "Turret-Road-ExtraBold";
-}
-nav {
-  font-family: "Turret-Road-Medium";
-  color: #000000;
+nav,
+p {
+  font-family: "UEFAEuro-Bold";
 }
 
 main {
-  /* background-image: url("/main-bg.png"); */
-  background-repeat: no-repeat;
+  background: linear-gradient(360deg, #37c100 17.43%, #1a5b00 124.33%);
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important; /* Сірий колір для неактивної крапки */
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important; /* Білий колір для активної крапки */
+}
+
+#wallet-card {
+  background-image: url("./images/card-bg.png");
   background-position: 100% 100%;
+  background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* .invest-info {
-  flex: 1;
+#current-wallet {
+  background-image: url("./images/current-wallet.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+#mastercardvisa {
+  background-image: url("./images/mastercardvisa.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+#crypto-wallet {
+  background-image: url("./images/crypto-wallet.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
-.invest-video {
-  flex: 2;
-}
-
-.invest-balance {
-  flex: 1.5;
-} */
-
-.invest-gradient {
-  background: linear-gradient(180deg, #ffffff -70%, #5b5b5b 142.5%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.copy-gradient {
-  background: linear-gradient(90deg, #ffffff 1.98%, #000000 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.partners-bg {
-  background: rgba(255, 255, 255, 0.06);
-  clip-path: polygon(
-    5% 0,
-    95% 0,
-    100% 5%,
-    100% 95%,
-    95% 100%,
-    5% 100%,
-    0 95%,
-    0 5%
-  );
-}
-
-.bottom-bg {
-  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, #212121 93.89%);
-}
-
-.top-bg {
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0) 0%, #161616 100%);
-  transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
-.stat-item {
-  will-change: transform, opacity;
+input{
+  background-color: inherit;
 }

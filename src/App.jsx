@@ -9,10 +9,17 @@ import WebApp from "@twa-dev/sdk";
 
 import Layout from "./pages/Layout";
 import Loading from "./pages/Loading";
-import Invest from "./pages/Invest";
-import Partners from "./pages/Partners";
-import Stats from "./pages/Stats";
-import HowItWorks from "./pages/HowItWorks";
+import HomePage from "./pages/Home";
+import WalletPage from "./pages/WalletPage";
+import BonusPage from "./pages/Bonus";
+import StoreLayout from "./pages/Store";
+import StorePlayers from "./pages/StorePlayers";
+import StoreBalls from "./pages/StoreBalls";
+import WalletLayout from "./pages/WalletLayout";
+import History from "./pages/History";
+import CountrySelect from "./pages/CountrySelect";
+import CryptoSelect from "./pages/CryptoSelect";
+import Withdraw from "./pages/Withdraw";
 
 function App() {
   const FallbackNavigate = ({ to }) => {
@@ -39,13 +46,30 @@ function App() {
       <Routes>
         <Route path="*" element={<Loading />} />
         <Route path="/menu" element={<Layout />}>
-          <Route index element={<FallbackNavigate to="/menu/invest" />} />
-          <Route path="invest">
-            <Route index element={<Invest />} />
-            <Route path="how-it-works" element={<HowItWorks />} />
+          <Route index element={<FallbackNavigate to="/menu/home" />} />
+          <Route path="/menu/home" element={<HomePage />} />
+          <Route path="/menu/store" element={<StoreLayout />}>
+            <Route
+              index
+              element={<FallbackNavigate to="/menu/store/players" />}
+            />
+            <Route path="/menu/store/players" element={<StorePlayers />} />
+            <Route path="/menu/store/balls" element={<StoreBalls />} />
           </Route>
-          <Route path="partners" element={<Partners />} />
-          <Route path="stats" element={<Stats />} />
+          <Route path="/menu/wallet" element={<WalletLayout />}>
+            <Route index element={<WalletPage />} />
+            <Route path="/menu/wallet/history" element={<History />} />
+            <Route
+              path="/menu/wallet/country-select"
+              element={<CountrySelect />}
+            />
+            <Route
+              path="/menu/wallet/crypto-select"
+              element={<CryptoSelect />}
+            />
+            <Route path="/menu/wallet/withdraw" element={<Withdraw />} />
+          </Route>
+          <Route path="/menu/bonus" element={<BonusPage />} />
         </Route>
       </Routes>
     </Router>

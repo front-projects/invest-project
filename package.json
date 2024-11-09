@@ -34,7 +34,7 @@
     "react-router-dom": "^6.23.1",
     "react-spinners": "^0.14.1",
     "react-typing-effect": "^2.0.5",
-    "swiper": "^11.1.5",
+    "swiper": "^11.1.14",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

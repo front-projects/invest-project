@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { LoadingIcon } from "./icons";
 import gsap from "gsap";
 
 export default function LoadingStar() {
@@ -9,9 +8,5 @@ export default function LoadingStar() {
     timeline.to(ref.current, { scale: 1.4 }).to(ref.current, { scale: 1.0 });
   }, []);
 
-  return (
-    <div ref={ref}>
-      <LoadingIcon />
-    </div>
-  );
+  return <div ref={ref}></div>;
 }

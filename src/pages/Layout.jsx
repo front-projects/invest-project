@@ -6,31 +6,23 @@ import { useSelector } from "react-redux";
 
 export default function Layout() {
   const location = useLocation();
-  const { pathname } = location;
-  const [background, setBackground] = useState("./main-bg.png");
 
-  useEffect(() => {
-    if (pathname !== "/menu/invest") {
-      setBackground("./main-bg2.png");
-    } else {
-      setBackground("./main-bg.png");
-    }
-  }, [pathname]);
+  // const user = useSelector((state) => state.user);
+  // if (user.status !== "succeeded") {
+  //   return <Navigate to="loading" />;
+  // }
+  /* Rectangle 6329 */
 
-  const user = useSelector((state) => state.user);
-  if (user.status !== "succeeded") {
-    return <Navigate to="loading" />;
-  }
   return (
     <div
       className="w-screen h-screen flex flex-col items-center justify-between xl:hidden"
       id="main-wrapper"
     >
-      <main
-        className="w-full mt-[5px] rounded-t-[40px]"
-        style={{ backgroundImage: `url("${background}")` }}
-      >
-        <div style={{ height: "calc(100vh - 95px)" }}>
+      <main className="w-full mt-[5px] rounded-t-[40px] flex flex-col items-center">
+        <div
+          style={{ height: "calc(100dvh - 79px)" }}
+          className="flex flex-col items-center w-full"
+        >
           <Outlet />
         </div>
 

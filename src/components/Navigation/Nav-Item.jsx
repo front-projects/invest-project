@@ -1,7 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import WebApp from "@twa-dev/sdk";
 
-export default function NavItem({ children, to }) {
+export default function NavItem({ children, to, title }) {
+  const { pathname } = useLocation();
+
+  const activeSection = pathname.startsWith(to);
   const setVibro = () => {
     WebApp.HapticFeedback.impactOccurred("soft");
   };
@@ -10,9 +13,13 @@ export default function NavItem({ children, to }) {
     <NavLink
       to={to}
       onClick={setVibro}
-      className={`flex justify-center text-[#000000]`}
+      className={`flex h-full justify-center text-white gap-[7px] items-center ${activeSection ? "bg-[rgba(255,255,255,0.35)] rounded-[48px] w-[139px]" : ""}`}
     >
-      [ {children} ]
+      <p>{children}</p>
+      {activeSection && <div>{title}</div>}
     </NavLink>
   );
 }
+
+// background: rgba(255, 255, 255, 0.35);
+// border-radius: 48px;
